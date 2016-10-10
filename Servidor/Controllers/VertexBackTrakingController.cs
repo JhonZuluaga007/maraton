@@ -23,12 +23,13 @@ namespace Servidor.Controllers
 
             return Json(nodo, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult sap(string Json)
+        public ActionResult sap(string json)
         {
             //se descerializa el json en una instancia de la clase datos
-            JsonVertex dato = JsonConvert.DeserializeObject<JsonVertex>(Json);
+            JsonVertex dato = JsonConvert.DeserializeObject<JsonVertex>(json);
             //estoy retornando la matriz 
-            return Content(dato.matriz.ToString());
+            //return Content(dato.matriz.ToString());
+            return Json(dato.matriz[0,1], JsonRequestBehavior.AllowGet);
         }
     }
 }
