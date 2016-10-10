@@ -7,7 +7,7 @@ namespace Servidor.Models
 {
     public class VertexCoverFuerzaBruta
     {
-        public string Vertex(int nodo, int[,] matriz)
+        public string Vertex(int nodo,int[,]matriz)
         {
             int nodos = nodo;
             int contador = 1;
@@ -15,8 +15,15 @@ namespace Servidor.Models
             //matriz = new List<int>();
             List<int> losValidos = new List<int>();
             //nodos = int.Parse(Console.ReadLine());
-            //matriz = new int[nodos, nodos];
-            int[,] grafo = matriz;
+            int[,] grafo = new int[nodos,nodos];
+            for(int i = 0; i < nodos; i++)
+            {
+                for(int j = 0; j < nodos; j++)
+                {
+                    grafo[i, j] = matriz[i, j];
+
+                }
+            }
             //Acá se llena la matriz
             int fila = Convert.ToInt32(Math.Pow(2, nodos));
             int[,] posibilidades = new int[fila, nodos];
@@ -137,14 +144,21 @@ namespace Servidor.Models
                 }
 
             }
-
+            
             //Fila en la matriz posibilidades donde está la respuesta
+           List<int> a =new List<int>();
             for (int j = 0; j < nodos; ++j)
             {
-                Console.Write(posibilidades[resultado, j]);
+
+               a.Add((posibilidades[resultado, j]));
+              
+               
+
+
             }
-            Console.ReadKey();
-            return posibilidades.ToString();
+            string respuesta = string.Join(",", a.ToArray());
+            return (respuesta.ToString());
+
         }
     }
 }

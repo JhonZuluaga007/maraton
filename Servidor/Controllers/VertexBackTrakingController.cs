@@ -10,26 +10,33 @@ namespace Servidor.Controllers
 {
     public class VertexBackTrakingController : Controller
     {
-        public void getLeer(int Nodos, int Matriz, int tipo)
-        {
-            //JsonVertex Leer = new JsonVertex();
-            //aca validamos y mandamos los datos al algoritmo que necesite 
-            
-        }
-        public ActionResult getFuerzaBruta(int nodo, int[,] matriz, int tipo)
-        {
-            VertexCoverFuerzaBruta vertex = new VertexCoverFuerzaBruta();
-            //string respuesta = vertex.Vertex(nodo, matriz);
 
-            return Json(nodo, JsonRequestBehavior.AllowGet);
-        }
-        public ActionResult sap(string json)
+       
+
+
+        public ActionResult VertexF(string json)
         {
+          
+            VertexCoverFuerzaBruta s = new VertexCoverFuerzaBruta();
+
+            //se descerializa el json en una instancia de la clase datos
+            JsonVertex dato = JsonConvert.DeserializeObject<JsonVertex>(json);
+            string respuesta = JsonConvert.SerializeObject(s.Vertex(dato.nodos, dato.matriz));
+            return Content("el nodo que forma el vertex cover es :[" + respuesta + "]");
+           
+        }
+
+
+        public ActionResult VertexB(string json)
+        {
+            VertexCoverBackTraking s = new VertexCoverBackTraking();
             //se descerializa el json en una instancia de la clase datos
             JsonVertex dato = JsonConvert.DeserializeObject<JsonVertex>(json);
             //estoy retornando la matriz 
-            //return Content(dato.matriz.ToString());
-            return Json(dato.matriz[0,1], JsonRequestBehavior.AllowGet);
+            int consulta = s.Solucion(dato.nodos, dato.matriz);
+            string respuesta = JsonConvert.SerializeObject(consulta);
+            return Content("el nodo que forma el vertex cover es :[" + respuesta + "]");
+
         }
     }
 }
