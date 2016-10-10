@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SapController.cs" />
     <Compile Include="Controllers\VertexBackTrakingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -205,8 +206,10 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BacktrackingTrios.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\JsonSap.cs" />
     <Compile Include="Models\JsonVertex.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SapFuerzaBruta.cs" />
     <Compile Include="Models\VertexCoverBackTraking.cs" />
     <Compile Include="Models\VertexCoverFuerzaBruta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -275,6 +278,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Sap\" />
     <Folder Include="Views\VertexBackTraking\" />
   </ItemGroup>
   <ItemGroup>

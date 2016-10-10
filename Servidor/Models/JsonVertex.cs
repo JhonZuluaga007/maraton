@@ -9,6 +9,5 @@ namespace Servidor.Models
     {
         public int nodos { get; set; }
         public int [,] matriz { get; set; }
-        public int tipo { get; set; }
     }
 }

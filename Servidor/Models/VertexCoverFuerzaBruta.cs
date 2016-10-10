@@ -151,9 +151,6 @@ namespace Servidor.Models
             {
 
                a.Add((posibilidades[resultado, j]));
-              
-               
-
 
             }
             string respuesta = string.Join(",", a.ToArray());
