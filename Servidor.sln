@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servidor", "Servidor\Servidor.csproj", "{24E58C01-E38B-43C3-8D3C-3D971D8E399A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasUnitarias", "PruebasUnitarias\PruebasUnitarias.csproj", "{1FCA9F40-16E4-4CE5-BD37-993B9C5D62D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VertexB", "VertexB\VertexB.csproj", "{F14134E3-C7DE-4D79-85C6-ABF388DCCFD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{24E58C01-E38B-43C3-8D3C-3D971D8E399A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24E58C01-E38B-43C3-8D3C-3D971D8E399A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24E58C01-E38B-43C3-8D3C-3D971D8E399A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FCA9F40-16E4-4CE5-BD37-993B9C5D62D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FCA9F40-16E4-4CE5-BD37-993B9C5D62D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FCA9F40-16E4-4CE5-BD37-993B9C5D62D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FCA9F40-16E4-4CE5-BD37-993B9C5D62D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F14134E3-C7DE-4D79-85C6-ABF388DCCFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F14134E3-C7DE-4D79-85C6-ABF388DCCFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F14134E3-C7DE-4D79-85C6-ABF388DCCFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F14134E3-C7DE-4D79-85C6-ABF388DCCFD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

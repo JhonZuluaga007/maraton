@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Servidor.Models
+namespace SERVIDOR
 {
     public class BacktrackingTrios2
     {
