@@ -26,8 +26,7 @@ namespace Servidor.Controllers
             //VertexBackTraking/VertexF?json={%27nodos%27:6,%27matriz%27:[[0,1,1,0,1,0],[1,0,1,1,0,0],[1,1,0,1,1,0],[0,1,1,0,1,0] ,[1,0,1,1,0,1],[0,0,0,0,1,0]]}
             ///VertexBackTraking/VertexB?json={'nodos':2,'matriz':[[1,0],[0,1]]}
             VertexCoverBackTraking s = new VertexCoverBackTraking();
-
-            //se descerializa el json en una instancia de la clase datos
+            
             JsonVertex dato = JsonConvert.DeserializeObject<JsonVertex>(json);
             int consulta = s.Solucion(dato.nodos, dato.matriz);
             string respuesta = JsonConvert.SerializeObject(consulta);
