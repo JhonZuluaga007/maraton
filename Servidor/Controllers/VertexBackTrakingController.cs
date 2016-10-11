@@ -20,21 +20,7 @@ namespace Servidor.Controllers
             string respuesta = JsonConvert.SerializeObject(s.Vertex(dato.nodos, dato.matriz));
             return Content("el minimo numero de nodos a tomar para cubrir todas las aristas es :" + respuesta );  
         }
-        //*******************************************************************************************************************************
-        public ActionResult VertexB(string json)
-        {
-            //VertexBackTraking/VertexF?json={%27nodos%27:6,%27matriz%27:[[0,1,1,0,1,0],[1,0,1,1,0,0],[1,1,0,1,1,0],[0,1,1,0,1,0] ,[1,0,1,1,0,1],[0,0,0,0,1,0]]}
-            ///VertexBackTraking/VertexB?json={'nodos':2,'matriz':[[1,0],[0,1]]}
-            VertexCoverBackTraking s = new VertexCoverBackTraking();
-            
-            JsonVertex dato = JsonConvert.DeserializeObject<JsonVertex>(json);
-            int consulta = s.Solucion(dato.nodos, dato.matriz);
-            string respuesta = JsonConvert.SerializeObject(consulta);
-            return Content("el minimo numero de nodos a tomar para cubrir todas las aristas es :" + respuesta );
-        }
-
-        //*******************************************************************************************************************************
-
+      
         public ActionResult VertexB2(string json)
         {
             //VertexBackTraking/VertexF?json={%27nodos%27:6,%27matriz%27:[[0,1,1,0,1,0],[1,0,1,1,0,0],[1,1,0,1,1,0],[0,1,1,0,1,0] ,[1,0,1,1,0,1],[0,0,0,0,1,0]]}
