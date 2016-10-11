@@ -205,13 +205,16 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BacktrackingTrios.cs" />
+    <Compile Include="Models\BacktrackingTrios2.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\JsonSap.cs" />
     <Compile Include="Models\JsonVertex.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\SapFuerzaBruta.cs" />
+    <Compile Include="Models\VertexCoverB2.cs" />
     <Compile Include="Models\VertexCoverBackTraking.cs" />
     <Compile Include="Models\VertexCoverFuerzaBruta.cs" />
+    <Compile Include="Models\VertexCoverP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

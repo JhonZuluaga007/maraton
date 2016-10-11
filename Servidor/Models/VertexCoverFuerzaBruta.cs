@@ -147,14 +147,19 @@ namespace Servidor.Models
             
             //Fila en la matriz posibilidades donde está la respuesta
            List<int> a =new List<int>();
+            int Nnodos = 0;
             for (int j = 0; j < nodos; ++j)
             {
-
-               a.Add((posibilidades[resultado, j]));
+                if (posibilidades[resultado, j] == 1)
+                {
+                   Nnodos++;
+                    
+                }
+              
 
             }
-            string respuesta = string.Join(",", a.ToArray());
-            return (respuesta.ToString());
+          
+            return (Nnodos.ToString());
 
         }
     }
